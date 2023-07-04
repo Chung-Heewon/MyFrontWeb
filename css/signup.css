@@ -14,11 +14,14 @@ form.signup>input,form.signup>button{
     display: inline-block;
     width: 100%;
 }
-button.duphc{
+button.iddupchk{
     background-color: lightcoral;
     width: 50%;
     border: 1px solid;
 }
 form.signup>button.signup{
+    background-color: green;
+    width : 50%;
+    border: 1px solid;
     display : none;
 }

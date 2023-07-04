@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function test(obj){
+                console.log(obj.innerHTML)
+                if(obj.innerHTML=='네이버'){
+                    location.href = 'http://naver.com'
+                }else if(obj.innerHTML=='다음'){
+                    location.href = 'http://daum.net'
+                }
+                
+            }
+            let test2=(url)=>{ //let test2= function(url){}
+                location.href = url;
+            }
+            window.addEventListener('load',()=>{
+                const btNaverObj = document.querySelector('button.naver')
+                const btDaumObj = document.querySelector('button.daum')
+                btNaverObj.addEventListener('click', (e)=>{
+                    //test(e.target);
+                    test2('http://naver.com')
+                })
+                btDaumObj.addEventListener('click', (e)=>{
+                    //test(e.target);
+                    test2('http://daum.net')
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <button class="naver">네이버</button>
+        <button class="daum">다음</button>
+    </body>
+</html>
