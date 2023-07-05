@@ -3,23 +3,23 @@
 window.addEventListener('load', ()=>{
     //DOM 트리에서 form객체 찾기
     const formObj= 
-    document.querySelector('body>form')
+    document.querySelector('form.signup')
 
     //아이디입력란 객체찾기
     const inputIdObj =
-    document.querySelector('body>form.signup>input[id=id]')
+    document.querySelector('form.signup>input[id=id]')
 
     //아이디중복확인버튼 객체 찾기
     const btIdDupchk = 
-    document.querySelector('body>form.signup>button.iddupchk')
+    document.querySelector('form.signup>button.iddupchk')
 
     //가입버튼객체 찾기
     const btSignup=
-    document.querySelector('body>form.signup>button.signup')
+    document.querySelector('form.signup>button.signup')
     //아이디중복확인버튼-일반버튼,
-    btIdDupchk.addEventListener('click',()=>{
+    btIdDupchk.addEventListener('click', ()=>{
         if(inputIdObj.value =='id1'){
-            this.alert('이미가입된 아이디입니다.')
+            alert('이미가입된 아이디입니다.')
         }else{
             btSignup.style.display = 'block'
         }
@@ -37,15 +37,18 @@ window.addEventListener('load', ()=>{
         //가입버튼을 화면에 보여주기하기 
         
             //비밀번호1,2가 일치 확인
-            const pwdObj = document.querySelector('body>form.signup>input[id=pwd]')
+            const pwdObj = document.querySelector('form.signup>input[id=pwd]')
             const pwd1Obj =document.querySelector('#pwd1') 
             if(pwdObj.value!=pwd1Obj.value){
                 alert('비밀번호가 일치하지 않습니다.')
                 pwdObj.focus();
+                e.preventDefault();
+                return false;
             }
-
-            e.preventDefault();
+            e.target.action = 'http://localhost:8888/back1/signup' //"http://www.naver.com"
+            e.target.method = 'post'
         })
+            
     //--폼 서브밋이벤트발생시 할 일 End--
     inputIdObj.addEventListener('focus',()=>{
 

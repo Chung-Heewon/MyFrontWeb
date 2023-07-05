@@ -84,7 +84,7 @@ window.addEventListener('load',function(){
         console.log(e.target.value, 'changed')
         switch(e.target.value){
             case 'sedan':
-                type2 = [{name : '쏘나타',               id: 'sonata' },
+                type = [{name : '쏘나타',               id: 'sonata' },
                          {name : '더 뉴 아반테',          id : 'avante'},
                          {name : '디 올 뉴 그랜저',       id : 'grandure'},
                          {name : '디 올 뉴 그랜저Hybrid', id : 'hybrid'}
@@ -118,16 +118,15 @@ window.addEventListener('load',function(){
                 // carType2Obj.innerHTML += '<option>'+type3[1]+ '</option>'
                 // carType2Obj.innerHTML += '<option>'+type3[2]+ '</option>'
                 // carType2Obj.style.display = 'inline-block'
-                let options = document.querySelectorAll('div.car>select.type2>option')
+                //let options = document.querySelectorAll('div.car>select.type2>option')
                 
-                //let options = carType2Obj.childNodes //carType2Obj라는 기준에서부터 자식들을 찾는다. 
-                //options.forEach((value)=>{
-                    //carType2Obj.removeChild(value)
-                //})
-                //
-                // carType2Obj.forEach((value)=>{
-                //     carType2Obj.removeChild(value)
-                // })
+                let options = carType2Obj.childNodes //carType2Obj라는 기준에서부터 자식들을 찾는다. 
+                options.forEach((option)=>{
+                    console.log(option, option.nodeType) //1:Element node, 2:Attribute, 3: Text node
+                    if(option.nodeType==1){
+                        carType2Obj.removeChild(option)
+                    }
+                })
                 type3.forEach((value)=>{
                     let optionObj = document.createElement('option')
                     //optionObj.innerHTML = value
