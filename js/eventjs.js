@@ -1,4 +1,5 @@
 alert("0") // script 영역을 만나자마다 "0"이 뜬다. 
+//load 이벤트가 발생하면 callback 함수 호출해(지금 당장 호출하는게 아니다)
 window.addEventListener('load',function(){ 
     alert("1")
     let resultobj=

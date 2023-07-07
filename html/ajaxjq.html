@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script>
+            $(()=>{
+                const btObj = $('button')
+                const pObj = $('p')
+            
+                btObj.click(()=>{
+
+                /*
+                //--버튼클릭되었을 때 할 일 START --
+                btObj.addEventListener('click', ()=>{
+                   // Create an XMLHttpRequest object
+                    const xhttp = new XMLHttpRequest();
+
+                    // Define a callback function
+                    xhttp.addEventListener('load',(e)=>{
+                        // Here you can use the Data
+                        pObj.innerHTML= e.target.responseText;
+                    }) 
+                    // Send a request
+                    //xhttp.open("GET", "login.html");
+                    xhttp.open("post","http://localhost:8888/back1/signup")
+                    //요청전달데이터를 from전송형태로 전달하려면 contentType설정이 필요
+                    xhttp.setRequestHeader("Content-type",
+                                           "application/x-www-form-urlencoded")
+                    xhttp.send("id=abc&pwd=p1&name=1");
+                })
+                
+            })
+            */
+           //pObj.load('./login.html') //get방식의 변형 (get방식으로 처리하는 함수)
+            
+        //    $.ajax({
+        //         url:'./login.html',
+        //         //method:'get', //(생략시, 기본 get 방식)
+        //         //data:,
+        //         success:(responseData)=>{
+        //             pObj.html(responseData)
+        //         }
+        //     })
+        $.ajax({
+            url:"http://localhost:8888/back1/signup",
+            method: 'post',
+            data: "id=abc&pwd=p1&name=1",
+            success: (responseData)=>{
+                pObj.html(responseData)
+            },
+            error: (jqXhr, status)=>{
+                alert(`status : ${status}, jqXhr.status:${jqXhr.status}`)
+            }
+
+        })
+        })
+        //--버튼클릭되었을 때 할 일 end --
+    })
+
+                  </script>
+    </head>
+    <body>
+        <div>DIV영역</div>
+        <p>p단락</p>
+        <button>클릭</button>
+    </body>
+</html>
