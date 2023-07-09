@@ -1,0 +1,32 @@
+section{
+    background-color: peachpuff !important;
+}
+section>div.productlist{
+    background-color: transparent;
+    overflow: auto;
+    width:100%;
+    height:100%;
+}
+section>div.productlist> div.product{
+    display: inline-block;
+    width: 20%;
+    height: 30%;
+}
+section>div.productlist> div.product>ul{
+    width: 100%;
+    list-style-type: none;
+    padding: 10px;
+}
+section>div.productlist> div.product>ul>li{
+    width: 100%;
+    margin: 5px;
+    text-align: center;
+}
+section>div.productlist> div.product>ul>li>img{
+    width:70%;
+    
+}
+section>div.productlist> div.product>ul>li>span{
+    display: block;
+    height:10px;
+}

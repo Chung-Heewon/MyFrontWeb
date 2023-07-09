@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<!--html comment -->
+<head>
+    <meta charset="UTF-8">
+    <title>HTML기본문법</title>
+    <style>
+        /* css comment */
+        *{
+            color: blue;   
+        }
+        /* element selector */
+        h1, p{
+            border:1px solid;
+        }
+        /* id selector */
+        #div2 {
+            background-color: #ffccff;
+        }
+
+        /* class selector : class속성값이 dotted1인 태그들을 선택하여 스타일 적용하라 */
+        .dotted1 {
+            border:1px dotted;
+        }
+    </style>
+</head>
+
+<body style="height:700px;">
+    <h1 style="width:500px;height:100px;margin: 10px 20px 30px 40px; padding:10px 30px;">제목1</h1>
+    <h3>제목3</h3>
+    <h6>제목6</h6>
+    <p style="width:300px; background-color: lightgray;">
+        서울=연합뉴스) 김주환 기자 = 지난 6일 출시된 역할수행게임(RPG) '디아블로 4'가 분산서비스거부(DDoS·디도스) 공격을 받으면서 주말에 게임을 즐기려던 이용자들이 불편을 겪었다.
+26일 게이머 커뮤니티와 블리자드엔터테인먼트 등에 따르면 '디아블로 4'는 전날 오후 2시(한국 시간 기준)께부터 이날 오전 2시께까지 12시간가량 접속 장애가 발생했다.
+이에 따라 주말 오후 게임에 접속을 시도한 이용자 대다수는 '유효한 디아블로 4 라이선스를 찾을 수 없습니다'라는 경고 메시지와 함께 로그인에 실패했다.
+간신히 접속에 성공한 이용자들도 갑자기 게임이 종료되거나 심한 끊김 현상이 발생하면서 제대로 게임을 즐길 수 없었던 것으로 전해졌다.
+    </p>
+    <p style="width:400px; border:1px dotted; background-color: beige;">
+        특별한 휴대전화 번호를 갖고 싶다면 골드번호 추첨에 도전해보면 어떨까. 
+       SK텔레콤은 골드번호 1만개의 주인공을 찾는 추첨 행사를 시행한다고 26일 밝혔다. 
+        골드번호는 1111, 0001, 3000처럼 특정 패턴이 있거나 국번과 동일한 번호(1234-1234), 특정한 의미(1004, 1472)를 갖는 번호다. 이번에 응모할 수 있는 골드번호는 9가지 유형으로 1인당 최대 3개까지 응모할 수 있다. 
+        골드번호 유형은 △번호 네 자리가 모두 같은 번호(AAAA) △앞 세자리가 0인 번호(000A) △앞 두자리가 같고, 뒤 두 자리가 00인 번호(AA00) △앞 두자리가 00이고 뒤 두 자리가 같은 번호(00AA) △뒤 세자리가 000인 번호(A000) △뒤 번호와 국번이 동일한 번호(ABCD-ABCD) △앞 두자리가 반복되는 번호(ABAB) △번호 네자리가 연속된 번호(ABCD) △특정의미가 부여된 번호다. 
+    </p>
+    <!--목록-->
+    <ol style="border:1px dashed; list-style-type: none; padding-left: 0px;">
+        <li>JAVA</li>
+        <li>SQL</li>
+        <li>HTML</li>
+    </ol>
+
+    <ul style="border:1px dashed; list-style-type: square;">
+        <li>JAVA</li>
+        <li>SQL</li>
+        <li>HTML</li>
+    </ul>
+    
+    <div style="background-color:yellow; height:300px">
+        <!--표 tbody생략하면 엔진에 의해 자동만들어진다-->
+        <!-- <table border="1" width="300px" height="100px"> -->
+        <table style="border:1px solid; border-collapse: collapse;     
+                    width:40%; 
+                    height:50%;">    
+            <tbody>
+                <tr>
+                    <td 
+                    style="width:100px; height:50px; margin:10px;"
+                    class="dotted1"
+                    >A</td>
+                    <td >B</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td >foot1</td>
+                    <td class="dotted1">foot2</td>
+                </tr>
+            </tfoot>
+            <thead>
+                <tr>
+                    <th class="dotted1">셀1</th>
+                    <th class="dotted1">셀2</th>
+                </tr>
+            </thead>
+        </table>
+    </div>    
+    <p style="border:1px dashed">
+        <img src="../images/common.jpg"
+             alt="엘리먼털 포토 가로기준" 
+             style="width:300px;margin:10px;">
+        <img src="../images/common.jpg" alt="엘리먼털 포토 세로기준" style="height:300px;">
+        <img src="../images/common.jpg" alt="엘리먼털 포토 상대경로" width="300px">
+        <img src="https://search.pstatic.net/common?quality=75&direct=true&src=https%3A%2F%2Fmovie-phinf.pstatic.net%2F20230515_225%2F1684114945647tfkjl_JPEG%2Fmovie_image.jpg" alt="엘리먼털 포토 실제URL" width="300px">
+        <img src="../XX.jpg" alt="없는 이미지">
+    </p>
+
+    <p>
+        html요소는 block요소와 inline요소로 나뉜다<br>
+        block요소는 1줄을 모두 사용하는 구조(크기지정가능, 상하마진가능),
+        inline요소는 1줄에 다음요소와 이어지는 구조(크기지정불가, 상하마진불가)이다
+        inline-block요소는 1줄에 다음요소와 이어지는 구조(크기지정가능, 상하마진가능)
+        <hr>
+        block요소의 종류로는 h1~h6, p, ul,ol, li, table, tr, div, hr
+        inline요소의 종류로는 span, br
+        inline-block요소의 종류로는 img, th/td(마진영역이 없음)  
+    </p>
+
+    <div style="margin:10px;">DIV1</div>
+    <div style="border:1px solid; width:100px; margin:20px;">DIV2</div>
+    <span style="border:1px solid; width:100px; margin:30px;">SPAN1</span>
+    <span style="margin:40px;">SPAN2</span>
+    <div>DIV3</div>
+    <span>SPAN3</span>
+
+    <div>
+        <a href="http://www.google.com">구글</a>
+        <a href="http://www.naver.com">네이버</a>
+        <a href="http://localhost:8888">local tomcat</a>
+        <a href="http://192.168.0.116:8888">116 tomcat</a>
+        <a href="#">링크없음</a>
+        <a href="#div3">div3</a>
+        <a href="./form.html">form.html</a>
+    </div>
+    <div id="div1" style="border:1px solid; height: 300px;">
+        first division 
+    </div>
+
+    <div id="div2" style="border:1px solid; height: 300px;">
+        second division 
+    </div>
+
+    <div id="div3" style="border:1px solid; height: 300px;">
+        third division 
+    </div>
+
+    
+</body>
+
+</html>

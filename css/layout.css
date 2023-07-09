@@ -66,7 +66,7 @@ section>div{
     /*background-color: aquamarine;*/
     height:90%;
     float: left;
-    width:83%;
+    width:100%;
 }
 
 section>div>article:first-child{
@@ -86,7 +86,7 @@ section>aside{
     background-color: azure;
     height: 90%;
     float: right;
-    width: 15%;
+    width: 20%;
 }
 footer{
    background-color: #2C2A29;color: #fff;

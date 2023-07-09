@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+}
+form.login{
+    background-color: #f6f5ef;
+    height: 80%;
+    width: 50%;
+    margin: 0 auto;
+    padding: 50px 10px;
+    position: relative;
+    top: 50px;
+}
+form.login>h3.title{
+    text-align: center;
+}
+/*name속성값이 id인 요소*/
+form.login>input[name=id], form.login>input[name=pwd]{
+    width: 100%;
+}
+
+form.login>span{
+    background-color : yellow;
+}
+
+@media screen and (max-width:640px) {
+    form.login>span{
+        display:block;
+    }
+}
