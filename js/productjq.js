@@ -7,8 +7,8 @@ $(()=>{
     //상품번호
     const prodNo = sessionStorage.getItem('prodNo')
     $.ajax({
-        url:'http://localhost:8888/back/product',
-        method : 'get',
+        url:'http://localhost:8888/back1/product',
+        method : 'post',
         data: `prodNo=${prodNo}`,
         success:(responseObj)=>{ //prodNo : "C0001", "prodName":"아메리카노", "prodPrice" : 1000}
             const prodName=responseObj.prodName
